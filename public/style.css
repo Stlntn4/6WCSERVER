@@ -1,0 +1,89 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: maroon; /* Maroon header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content area */
+main {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+/* Card layout for forms and content */
+.card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0px 0px 10px maroon;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Label styling */
+label {
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Input fields */
+input {
+    padding: 8px;
+    border: 1px solid maroon;
+    border-radius: 5px;
+}
+
+/* Buttons */
+button {
+    background-color: maroon;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a00000;
+}
+
+/* Footer styles */
+footer {
+    background-color: maroon;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

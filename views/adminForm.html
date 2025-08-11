@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Form</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header>
+        <h1>Admin Form</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/studentForm">Student Form</a>
+            <a href="/adminForm">Admin Form</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="card">
+            <!-- Form sends data to /api/getAdmin using GET method -->
+            <form method="GET" action="/api/getAdmin">
+                <label>Admin ID:</label>
+                <input type="text" name="adminID" required>
+                
+                <label>First Name:</label>
+                <input type="text" name="firstName" required>
+                
+                <label>Last Name:</label>
+                <input type="text" name="lastName" required>
+                
+                <label>Department:</label>
+                <input type="text" name="department" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Admin Portal</p>
+    </footer>
+</body>
+</html>

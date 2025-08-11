@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header>
+        <h1>Student Form</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/studentForm">Student Form</a>
+            <a href="/adminForm">Admin Form</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="card">
+            <!-- Form sends data to /api/getStudent using GET method -->
+            <form method="GET" action="/api/getStudent">
+                <label>Student ID:</label>
+                <input type="text" name="studentID" required>
+                
+                <label>First Name:</label>
+                <input type="text" name="firstName" required>
+                
+                <label>Last Name:</label>
+                <input type="text" name="lastName" required>
+                
+                <label>Section:</label>
+                <input type="text" name="section" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Student Portal</p>
+    </footer>
+</body>
+</html>
