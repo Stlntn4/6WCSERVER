@@ -8,9 +8,9 @@ const PORT = 5000;
 
 // Middleware to parse URL-encoded data (form submissions)
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json()); 
+app.use(bodyParser.json());
 
-const __dirname = path.resolve(); 
+const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, 'public')));
 
 // =========================
@@ -39,6 +39,10 @@ app.get('/adminForm', (req, res) => {
 // Handle form submission for admin data (POST /api/postAdmin)
 app.post('/api/postAdmin', (req, res) => {
     const { adminID, firstName, lastName, department } = req.body; // Extract data from the request body
+
+    // Log the received admin data in the terminal
+    console.log('Admin Data Received:', { adminID, firstName, lastName, department });
+
     res.json({
         message: 'Admin data received successfully!',
         adminData: { adminID, firstName, lastName, department }
@@ -48,6 +52,10 @@ app.post('/api/postAdmin', (req, res) => {
 // Get a single student using POST parameters
 app.post('/api/getStudent', (req, res) => {
     const { studentID, firstName, lastName, section } = req.body; // Use body to extract data
+
+    // Log the received student data in the terminal
+    console.log('Student Data Received:', { studentID, firstName, lastName, section });
+
     res.json({
         studentID,
         firstName,
@@ -60,6 +68,10 @@ app.post('/api/getStudent', (req, res) => {
 // Get a single admin using POST parameters
 app.post('/api/getAdmin', (req, res) => {
     const { adminID, firstName, lastName, department } = req.body; // Use body to extract data
+
+    // Log the received admin data in the terminal
+    console.log('Admin Data Received:', { adminID, firstName, lastName, department });
+
     res.json({
         adminID,
         firstName,
@@ -71,6 +83,8 @@ app.post('/api/getAdmin', (req, res) => {
 
 // Get all students (sample data for testing)
 app.post('/api/getAllStudents', (req, res) => {
+    // You can log the data sent here as well if needed
+    console.log('Fetching all students...');
     res.json([
         { studentID: 1, firstName: "Juan", lastName: "Dela Cruz", section: "A" },
         { studentID: 2, firstName: "Maria", lastName: "Santos", section: "B" }
